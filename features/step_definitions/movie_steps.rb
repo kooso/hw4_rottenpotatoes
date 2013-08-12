@@ -1,5 +1,4 @@
 Given /^the following movies exist:$/ do |movies_table|
-  # table is a Cucumber::Ast::Table
     movies_table.hashes.each do |movie|
         Movie.new(movie).save!
     end
